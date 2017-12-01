@@ -48,17 +48,6 @@ CDetour *g_pDetour=nullptr;
 IForward *g_pProcessPacket = nullptr;
 IGameConfig *g_pGameConf = nullptr;
 
-
-/*
-#define WINDOWS_SIGNATURE "\x55\x8B\xEC\x81\xEC\x50\x0A"
-#define WINDOWS_SIG_LENGTH 7
-
-#define LINUX_SIGNATURE "_ZN11CBaseServer27ProcessConnectionlessPacketEP11netpacket_s"
-
-#define DETOUR_CREATE_STATIC_PTR(name, ptr) CDetourManager::CreateDetour(GET_STATIC_CALLBACK(name), GET_STATIC_TRAMPOLINE(name), ptr);
-#define DETOUR_CREATE_MEMBER_PTR(name, ptr) CDetourManager::CreateDetour(GET_MEMBER_CALLBACK(name), GET_MEMBER_TRAMPOLINE(name), ptr);
-*/
-
 DETOUR_DECL_MEMBER1(Detour_ProcessPacket, bool, netpacket_t*, packet)
 {
     if(!g_pProcessPacket)
@@ -91,16 +80,6 @@ bool UDPCap::SDK_OnLoad(char *error, size_t maxlength, bool late)
     SM_GET_IFACE(MEMORYUTILS, memutils);
 	CDetourManager::Init(g_pSM->GetScriptingEngine(), g_pGameConf);
 
-	/*
-    //Yea, this is copypasted from Console Cleaner extension
-#ifdef PLATFORM_WINDOWS
-	HMODULE tier0 = GetModuleHandle("engine.dll");
-	void * fn = memutils->FindPattern(tier0, WINDOWS_SIGNATURE, WINDOWS_SIG_LENGTH);
-#elif defined PLATFORM_LINUX
-	void * tier0 = dlopen("engine_srv.so", RTLD_NOW);
-	void * fn = memutils->ResolveSymbol(tier0, LINUX_SIGNATURE);
-#endif
-    */
     g_pDetour=DETOUR_CREATE_MEMBER(Detour_ProcessPacket, "CBaseServer::ProcessConnectionlessPacket");
 
     if(g_pDetour==nullptr)
