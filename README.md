@@ -1,1 +1,3 @@
-# UDPCap-ext
+# UDPCap extension repository
+
+More info coming soon...
