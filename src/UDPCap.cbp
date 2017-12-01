@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="UDPCap" />
+		<Option pch_mode="2" />
+		<Option compiler="microsoft_visual_c_2012" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Release/UDPCap" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="3" />
+				<Option compiler="microsoft_visual_c_2012" />
+				<Option createDefFile="1" />
+				<Option createStaticLib="1" />
+				<Compiler>
+					<Add option="/MD" />
+					<Add option="/Ox" />
+					<Add option="/W3" />
+					<Add option="/DBUILD_DLL" />
+					<Add option="/DNDEBUG" />
+					<Add option="/DWIN32" />
+				</Compiler>
+				<Linker>
+					<Add option="/INCREMENTAL:NO" />
+					<Add library="user32" />
+				</Linker>
+				<ExtraCommands>
+					<Add after='mt.exe /nologo /manifest &quot;bin\Release\UDPCap.dll.manifest&quot; /outputresource:&quot;bin\Release\UDPCap.dll&quot;;2' />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add directory="../sourcemod_old/public" />
+			<Add directory="../sourcemod_old/sourcepawn/include" />
+			<Add directory="../UDPCap" />
+			<Add directory="../hl2sdk-sdk2013/public" />
+			<Add directory="../hl2sdk-sdk2013" />
+			<Add directory="../hl2sdk-sdk2013/public/tier0" />
+		</Compiler>
+		<Linker>
+			<Add library="Ws2_32" />
+		</Linker>
+		<Unit filename="../sourcemod/public/CDetour/detours.cpp" />
+		<Unit filename="../sourcemod/public/asm/asm.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="../sourcemod/public/smsdk_ext.cpp" />
+		<Unit filename="extension.cpp" />
+		<Unit filename="extension.h" />
+		<Unit filename="fastdefs.cpp" />
+		<Unit filename="fastdefs.h" />
+		<Unit filename="smsdk_config.h" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

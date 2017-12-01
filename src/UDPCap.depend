@@ -1,0 +1,715 @@
+# depslib dependency file v1.0
+1512061046 source:e:\udpcap\extension.cpp
+	"extension.h"
+	"inetchannel.h"
+	"fastdefs.h"
+	"windows.h"
+
+1511718160 e:\udpcap\extension.h
+	"smsdk_ext.h"
+	"CDetour\detours.h"
+
+1511701366 e:\sourcemod\public\smsdk_ext.h
+	"smsdk_config.h"
+	<IExtensionSys.h>
+	<IHandleSys.h>
+	<sp_vm_api.h>
+	<sm_platform.h>
+	<ISourceMod.h>
+	<IForwardSys.h>
+	<IPlayerHelpers.h>
+	<IDBDriver.h>
+	<IGameConfigs.h>
+	<IMemoryUtils.h>
+	<IGameHelpers.h>
+	<ITimerSystem.h>
+	<IADTFactory.h>
+	<IThreader.h>
+	<ILibrarySys.h>
+	<IPluginSys.h>
+	<IMenuManager.h>
+	<IAdminSystem.h>
+	<ITextParsers.h>
+	<IUserMessages.h>
+	<ITranslator.h>
+	<IRootConsoleMenu.h>
+	<ISmmPlugin.h>
+	<eiface.h>
+	<metamod_wrappers.h>
+
+1511701364 e:\sourcemod\public\iextensionsys.h
+	<IShareSys.h>
+	<ILibrarySys.h>
+
+1511701364 e:\sourcemod\public\isharesys.h
+	<sp_vm_types.h>
+	<sp_vm_api.h>
+
+1511701380 e:\sourcemod\sourcepawn\include\sp_vm_types.h
+	<stddef.h>
+	<stdint.h>
+	"sp_typeutil.h"
+
+1511701380 e:\sourcemod\sourcepawn\include\sp_typeutil.h
+	"sp_vm_types.h"
+
+1511701380 e:\sourcemod\sourcepawn\include\sp_vm_api.h
+	<stdio.h>
+	<assert.h>
+	"sp_vm_types.h"
+
+1511701364 e:\sourcemod\public\ilibrarysys.h
+	<IShareSys.h>
+	<time.h>
+
+1511701364 e:\sourcemod\public\ihandlesys.h
+	<IShareSys.h>
+	<sp_vm_types.h>
+
+1511705696 e:\sourcemod\public\sm_platform.h
+	<windows.h>
+	<direct.h>
+	<errno.h>
+	<unistd.h>
+	<dirent.h>
+	<dlfcn.h>
+	<sys/stat.h>
+	<sys/syslimits.h>
+
+1511701364 e:\sourcemod\public\isourcemod.h
+	<IHandleSys.h>
+	<sp_vm_api.h>
+	<IDataPack.h>
+	<time.h>
+
+1511701364 e:\sourcemod\public\idatapack.h
+	<sp_vm_api.h>
+
+1511701364 e:\sourcemod\public\iforwardsys.h
+	<IPluginSys.h>
+	<sp_vm_api.h>
+
+1511701364 e:\sourcemod\public\ipluginsys.h
+	<IShareSys.h>
+	<IHandleSys.h>
+	<sp_vm_api.h>
+
+1511701364 e:\sourcemod\public\iplayerhelpers.h
+	<IShareSys.h>
+	<IAdminSystem.h>
+
+1511701364 e:\sourcemod\public\iadminsystem.h
+	<IShareSys.h>
+
+1511701364 e:\sourcemod\public\idbdriver.h
+	<IShareSys.h>
+	<IHandleSys.h>
+	<string.h>
+
+1511701364 e:\sourcemod\public\igameconfigs.h
+	<IShareSys.h>
+	<IHandleSys.h>
+	<ITextParsers.h>
+
+1511701364 e:\sourcemod\public\itextparsers.h
+	<IShareSys.h>
+
+1511701364 e:\sourcemod\public\imemoryutils.h
+	<IShareSys.h>
+
+1511701364 e:\sourcemod\public\igamehelpers.h
+	<IShareSys.h>
+
+1511701364 e:\sourcemod\public\itimersystem.h
+	<IShareSys.h>
+	<IForwardSys.h>
+
+1511701364 e:\sourcemod\public\iadtfactory.h
+	<IShareSys.h>
+
+1511701364 e:\sourcemod\public\ithreader.h
+	<IShareSys.h>
+
+1511701364 e:\sourcemod\public\imenumanager.h
+	<IShareSys.h>
+	<IHandleSys.h>
+
+1511701364 e:\sourcemod\public\iusermessages.h
+	<IShareSys.h>
+	<sp_vm_api.h>
+	<IForwardSys.h>
+	<irecipientfilter.h>
+
+1511701364 e:\sourcemod\public\itranslator.h
+	<IShareSys.h>
+
+1511701364 e:\sourcemod\public\irootconsolemenu.h
+
+1511701364 e:\sourcemod\public\metamod_wrappers.h
+
+1512059106 e:\udpcap\smsdk_config.h
+
+1511701366 source:e:\sourcemod\public\smsdk_ext.cpp
+	<stdio.h>
+	<stdlib.h>
+	"smsdk_ext.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\irecipientfilter.h
+
+1509857542 e:\hl2sdk-sdk2013\public\eiface.h
+	"convar.h"
+	"icvar.h"
+	"edict.h"
+	"mathlib/vplane.h"
+	"iserverentity.h"
+	"engine/ivmodelinfo.h"
+	"soundflags.h"
+	"bitvec.h"
+	"engine/iserverplugin.h"
+	"tier1/bitbuf.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\icvar.h
+	"appframework/IAppSystem.h"
+	"tier1/iconvar.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\appframework\iappsystem.h
+	"tier1/interface.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier1\interface.h
+	<dlfcn.h>
+	<unistd.h>
+	"tier0/platform.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\platform.h
+	<xtl.h>
+	<xaudio2.h>
+	<xbdm.h>
+	<Xgraphics.h>
+	<xui.h>
+	<pmcpbsetup.h>
+	<XMAHardwareAbstraction.h>
+	"wchartypes.h"
+	"basetypes.h"
+	"tier0/valve_off.h"
+	<alloca.h>
+	<unistd.h>
+	<signal.h>
+	<time.h>
+	<stdlib.h>
+	<malloc.h>
+	<new>
+	<string.h>
+	"tier0/valve_minmax_on.h"
+	<limits.h>
+	<float.h>
+	"annotations.h"
+	"tier0/fasttimer.h"
+	"xbox/xbox_core.h"
+	"tier0/valve_on.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\wchartypes.h
+	"tier0/valve_off.h"
+	<tchar.h>
+	"tier0/valve_on.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\valve_off.h
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\valve_on.h
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\basetypes.h
+	"commonmacros.h"
+	"wchartypes.h"
+	"tier0/valve_off.h"
+	"protected_things.h"
+	"xbox_codeline_defines.h"
+	<stdint.h>
+	"valve_minmax_on.h"
+	<math.h>
+	"tier0/valve_on.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\commonmacros.h
+	"tier0/platform.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\protected_things.h
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\xbox_codeline_defines.h
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\valve_minmax_on.h
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\annotations.h
+	<sal.h>
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\fasttimer.h
+	<intrin.h>
+	<assert.h>
+	"tier0/platform.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier1\iconvar.h
+	"tier0/dbg.h"
+	"tier0/platform.h"
+	"tier1/strtools.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\dbg.h
+	"basetypes.h"
+	"dbgflag.h"
+	"platform.h"
+	<math.h>
+	<stdio.h>
+	<stdarg.h>
+	"tier0/valve_off.h"
+	"tier0/valve_on.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\dbgflag.h
+
+1509857542 e:\hl2sdk-sdk2013\public\tier1\strtools.h
+	"tier0/platform.h"
+	<ctype.h>
+	<stdarg.h>
+	<wchar.h>
+	<math.h>
+	<wctype.h>
+	<string.h>
+	<stdlib.h>
+	<stdarg.h>
+
+1509857542 e:\hl2sdk-sdk2013\public\edict.h
+	"mathlib/vector.h"
+	"cmodel.h"
+	"const.h"
+	"iserverentity.h"
+	"globalvars_base.h"
+	"engine/ICollideable.h"
+	"iservernetworkable.h"
+	"bitvec.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\mathlib\vector.h
+	<math.h>
+	<float.h>
+	"tier0/basetypes.h"
+	<stdlib.h>
+	<xmmintrin.h>
+	"tier0/dbg.h"
+	"tier0/threadtools.h"
+	"mathlib/vector2d.h"
+	"mathlib/math_pfns.h"
+	"minmax.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\threadtools.h
+	<limits.h>
+	"tier0/platform.h"
+	"tier0/dbg.h"
+	"tier0/vcrmode.h"
+	<intrin.h>
+	<pthread.h>
+	<errno.h>
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\vcrmode.h
+	<process.h>
+	"tier0/platform.h"
+	"tier0/vcr_shared.h"
+	"tier0/dbg.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\vcr_shared.h
+
+1509857542 e:\hl2sdk-sdk2013\public\mathlib\vector2d.h
+	<math.h>
+	<float.h>
+	"tier0/basetypes.h"
+	<stdlib.h>
+	"tier0/dbg.h"
+	"mathlib/math_pfns.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\mathlib\math_pfns.h
+	<xboxmath.h>
+
+1509857542 e:\hl2sdk-sdk2013\public\minmax.h
+
+1509857542 e:\hl2sdk-sdk2013\public\cmodel.h
+	"trace.h"
+	"tier0/dbg.h"
+	"basehandle.h"
+	"bspflags.h"
+	"vcollide.h"
+	"gametrace.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\trace.h
+	"mathlib/mathlib.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\mathlib\mathlib.h
+	<math.h>
+	"tier0/basetypes.h"
+	"tier0/commonmacros.h"
+	"mathlib/vector.h"
+	"mathlib/vector2d.h"
+	"tier0/dbg.h"
+	"mathlib/math_pfns.h"
+	<xmmintrin.h>
+	<float.h>
+
+1509857542 e:\hl2sdk-sdk2013\public\basehandle.h
+	"const.h"
+	"tier0/dbg.h"
+	"ihandleentity.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\const.h
+	"basetypes.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\ihandleentity.h
+
+1509857542 e:\hl2sdk-sdk2013\public\bspflags.h
+
+1509857542 e:\hl2sdk-sdk2013\public\vcollide.h
+
+1509857542 e:\hl2sdk-sdk2013\public\gametrace.h
+	"cmodel.h"
+	"utlvector.h"
+	"ihandleentity.h"
+	"ispatialpartition.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\ispatialpartition.h
+	"interface.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\iserverentity.h
+	"iserverunknown.h"
+	"string_t.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\iserverunknown.h
+	"ihandleentity.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\string_t.h
+
+1509857542 e:\hl2sdk-sdk2013\public\globalvars_base.h
+
+1509857542 e:\hl2sdk-sdk2013\public\engine\icollideable.h
+
+1509857542 e:\hl2sdk-sdk2013\public\iservernetworkable.h
+	"ihandleentity.h"
+	"basetypes.h"
+	"bitvec.h"
+	"const.h"
+	"bspfile.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\bitvec.h
+	<limits.h>
+	"tier0/dbg.h"
+	"tier0/basetypes.h"
+	<intrin.h>
+	"tier0/memdbgon.h"
+	"tier0/memdbgoff.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\memdbgon.h
+	"basetypes.h"
+	<tchar.h>
+	<wchar.h>
+	<string.h>
+	<malloc.h>
+	"commonmacros.h"
+	"memalloc.h"
+	<cstddef>
+	<glob.h>
+	<new>
+	<sys/types.h>
+	<crtdbg.h>
+	<crtdbg.h>
+	"tier0/memdbgoff.h"
+	"memalloc.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\memalloc.h
+	<stddef.h>
+	<malloc/malloc.h>
+	"tier0/mem.h"
+	<typeinfo.h>
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\mem.h
+	<stddef.h>
+	"tier0/platform.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier0\memdbgoff.h
+
+1509857542 e:\hl2sdk-sdk2013\public\bspfile.h
+	"mathlib/mathlib.h"
+	"datamap.h"
+	"mathlib/bumpvects.h"
+	"mathlib/compressed_light_cube.h"
+	"zip_uncompressed.h"
+	"bspflags.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\datamap.h
+	"mathlib/vector.h"
+	"tier1/utlvector.h"
+	"tier0/memdbgon.h"
+	"tier0/memdbgoff.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier1\utlvector.h
+	<string.h>
+	"tier0/platform.h"
+	"tier0/dbg.h"
+	"tier0/threadtools.h"
+	"tier1/utlmemory.h"
+	"tier1/utlblockmemory.h"
+	"tier1/strtools.h"
+	"vstdlib/random.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier1\utlmemory.h
+	"tier0/dbg.h"
+	<string.h>
+	"tier0/platform.h"
+	"mathlib/mathlib.h"
+	"tier0/memalloc.h"
+	"tier0/memdbgon.h"
+	"tier0/memdbgoff.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier1\utlblockmemory.h
+	"tier0/dbg.h"
+	"tier0/platform.h"
+	"mathlib/mathlib.h"
+	"tier0/memalloc.h"
+	"tier0/memdbgon.h"
+	"tier0/memdbgoff.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\vstdlib\random.h
+	"vstdlib/vstdlib.h"
+	"tier0/basetypes.h"
+	"tier0/threadtools.h"
+	"tier1/interface.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\vstdlib\vstdlib.h
+	"tier0/platform.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\mathlib\bumpvects.h
+	"mathlib/mathlib.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\mathlib\compressed_light_cube.h
+	"mathlib/mathlib.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\zip_uncompressed.h
+	"datamap.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\mathlib\vplane.h
+	"mathlib/vector.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\engine\ivmodelinfo.h
+	"platform.h"
+	"dbg.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\soundflags.h
+
+1509857542 e:\hl2sdk-sdk2013\public\engine\iserverplugin.h
+	"edict.h"
+	"tier1/interface.h"
+	"tier1/KeyValues.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\tier1\keyvalues.h
+	"utlvector.h"
+	"Color.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\color.h
+
+1509857542 e:\hl2sdk-sdk2013\public\tier1\bitbuf.h
+	"mathlib/mathlib.h"
+	"mathlib/vector.h"
+	"basetypes.h"
+	"tier0/dbg.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\inetchannel.h
+	"tier0/platform.h"
+	"inetchannelinfo.h"
+	"tier1/bitbuf.h"
+
+1509857542 e:\hl2sdk-sdk2013\public\inetchannelinfo.h
+
+1511701364 e:\sourcemod\public\cdetour\detours.h
+	"extension.h"
+	<jit/jit_helpers.h>
+	<jit/x86/x86_macros.h>
+	"detourhelpers.h"
+
+1511701364 e:\sourcemod\public\jit\jit_helpers.h
+	<sp_vm_types.h>
+	<sp_vm_api.h>
+	<stdint.h>
+
+1511701364 e:\sourcemod\public\jit\x86\x86_macros.h
+	<limits.h>
+
+1511701364 e:\sourcemod\public\cdetour\detourhelpers.h
+	<sys/mman.h>
+
+1511701364 source:e:\sourcemod\public\cdetour\detours.cpp
+	"detours.h"
+	<asm/asm.h>
+
+1511701364 e:\sourcemod\public\asm\asm.h
+
+1511701364 source:e:\sourcemod\public\asm\asm.c
+	"asm.h"
+	<dlfcn.h>
+	<string.h>
+	<stdio.h>
+	<stdlib.h>
+
+1511812386 e:\udpcap\fastdefs.h
+	<cstdint>
+	"tier1\bitbuf.h"
+
+1511812370 source:e:\udpcap\fastdefs.cpp
+	"fastdefs.h"
+	<stdio.h>
+
+1511814526 e:\sourcemod_old\public\smsdk_ext.h
+	"smsdk_config.h"
+	<IExtensionSys.h>
+	<IHandleSys.h>
+	<sp_vm_api.h>
+	<sm_platform.h>
+	<ISourceMod.h>
+	<IForwardSys.h>
+	<IPlayerHelpers.h>
+	<IDBDriver.h>
+	<IGameConfigs.h>
+	<IMemoryUtils.h>
+	<IGameHelpers.h>
+	<ITimerSystem.h>
+	<IADTFactory.h>
+	<IThreader.h>
+	<ILibrarySys.h>
+	<IPluginSys.h>
+	<IMenuManager.h>
+	<IAdminSystem.h>
+	<ITextParsers.h>
+	<IUserMessages.h>
+	<ITranslator.h>
+	<IRootConsoleMenu.h>
+	<ISmmPlugin.h>
+	<eiface.h>
+	<metamod_wrappers.h>
+
+1511814524 e:\sourcemod_old\public\iextensionsys.h
+	<IShareSys.h>
+	<ILibrarySys.h>
+
+1511814526 e:\sourcemod_old\public\isharesys.h
+	<sp_vm_types.h>
+	<sp_vm_api.h>
+
+1511814128 e:\sourcemod_old\sourcepawn\include\sp_vm_types.h
+	<stddef.h>
+	<stdint.h>
+	"sp_typeutil.h"
+
+1511814128 e:\sourcemod_old\sourcepawn\include\sp_typeutil.h
+	"sp_vm_types.h"
+
+1511814128 e:\sourcemod_old\sourcepawn\include\sp_vm_api.h
+	<stdio.h>
+	<assert.h>
+	"sp_vm_types.h"
+
+1511814524 e:\sourcemod_old\public\ilibrarysys.h
+	<IShareSys.h>
+	<time.h>
+
+1511814524 e:\sourcemod_old\public\ihandlesys.h
+	<IShareSys.h>
+	<sp_vm_types.h>
+
+1511814526 e:\sourcemod_old\public\sm_platform.h
+	<windows.h>
+	<direct.h>
+	<errno.h>
+	<unistd.h>
+	<dirent.h>
+	<dlfcn.h>
+	<sys/stat.h>
+	<sys/syslimits.h>
+
+1511814526 e:\sourcemod_old\public\isourcemod.h
+	<IHandleSys.h>
+	<sp_vm_api.h>
+	<IDataPack.h>
+	<time.h>
+
+1511814524 e:\sourcemod_old\public\idatapack.h
+	<sp_vm_api.h>
+
+1511814524 e:\sourcemod_old\public\iforwardsys.h
+	<IPluginSys.h>
+	<sp_vm_api.h>
+
+1511814524 e:\sourcemod_old\public\ipluginsys.h
+	<IShareSys.h>
+	<IHandleSys.h>
+	<sp_vm_api.h>
+
+1511814524 e:\sourcemod_old\public\iplayerhelpers.h
+	<IShareSys.h>
+	<IAdminSystem.h>
+
+1511814524 e:\sourcemod_old\public\iadminsystem.h
+	<IShareSys.h>
+
+1511814524 e:\sourcemod_old\public\idbdriver.h
+	<IShareSys.h>
+	<IHandleSys.h>
+	<string.h>
+
+1511814524 e:\sourcemod_old\public\igameconfigs.h
+	<IShareSys.h>
+	<IHandleSys.h>
+	<ITextParsers.h>
+
+1511814526 e:\sourcemod_old\public\itextparsers.h
+	<IShareSys.h>
+
+1511814524 e:\sourcemod_old\public\imemoryutils.h
+	<IShareSys.h>
+
+1511814524 e:\sourcemod_old\public\igamehelpers.h
+	<IShareSys.h>
+
+1511814526 e:\sourcemod_old\public\itimersystem.h
+	<IShareSys.h>
+	<IForwardSys.h>
+
+1511814524 e:\sourcemod_old\public\iadtfactory.h
+	<IShareSys.h>
+
+1511814526 e:\sourcemod_old\public\ithreader.h
+	<IShareSys.h>
+
+1511814524 e:\sourcemod_old\public\imenumanager.h
+	<IShareSys.h>
+	<IHandleSys.h>
+
+1511814526 e:\sourcemod_old\public\iusermessages.h
+	<IShareSys.h>
+	<sp_vm_api.h>
+	<IForwardSys.h>
+	<irecipientfilter.h>
+
+1511814526 e:\sourcemod_old\public\itranslator.h
+	<IShareSys.h>
+
+1511814526 e:\sourcemod_old\public\irootconsolemenu.h
+
+1511814526 e:\sourcemod_old\public\metamod_wrappers.h
+
+1511814526 e:\sourcemod_old\public\cdetour\detours.h
+	"extension.h"
+	<jit/jit_helpers.h>
+	<jit/x86/x86_macros.h>
+	"detourhelpers.h"
+
+1511814526 e:\sourcemod_old\public\jit\jit_helpers.h
+	<sp_vm_types.h>
+	<sp_vm_api.h>
+	<stdint.h>
+
+1511814526 e:\sourcemod_old\public\jit\x86\x86_macros.h
+	<limits.h>
+
+1511814526 e:\sourcemod_old\public\cdetour\detourhelpers.h
+	<sys/mman.h>
+
+1511814526 e:\sourcemod_old\public\asm\asm.h
+

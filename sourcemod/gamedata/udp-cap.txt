@@ -1,0 +1,16 @@
+"Games"
+{
+	/* Team Fortress 2 */
+	"tf"
+	{
+		"Signatures"
+		{
+			"CBaseServer::ProcessConnectionlessPacket"
+			{
+				"library"	"engine"
+				"windows"	"\x55\x8B\xEC\x81\xEC\x50\x0A"
+				"linux"		"_ZN11CBaseServer27ProcessConnectionlessPacketEP11netpacket_s"
+			}
+		}
+	}
+}
