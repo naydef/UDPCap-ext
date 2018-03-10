@@ -44,31 +44,50 @@ UDPCap g_Sample;		/**< Global singleton for extension's main interface */
 SMEXT_LINK(&g_Sample);
 
 INetChannel* netchannelptr=nullptr;
-CDetour *g_pDetour=nullptr;
-IForward *g_pProcessPacket = nullptr;
+CDetour *g_pDetourProcessPacket=nullptr;
+CDetour *g_pDetourSendPacket=nullptr;
+IForward *g_pProcessPacketIn = nullptr;
+IForward *g_pProcessPacketOut = nullptr;
 IGameConfig *g_pGameConf = nullptr;
 
-DETOUR_DECL_MEMBER1(Detour_ProcessPacket, bool, netpacket_t*, packet)
+DETOUR_DECL_MEMBER1(Detour_ProcessPacketIn, bool, netpacket_t*, packet)
 {
-	if(!g_pProcessPacket)
+	if(!g_pProcessPacketIn)
 	{
-		return DETOUR_MEMBER_CALL(Detour_ProcessPacket)(packet); // This is not supposed to happen normally. Generally speaking, don't mess with destiny.
+		return DETOUR_MEMBER_CALL(Detour_ProcessPacketIn)(packet); // This is not supposed to happen normally. Generally speaking, don't mess with destiny.
 	}
 	cell_t result=0;
 
-	g_pProcessPacket->PushString(packet->from.ToString());
-	g_pProcessPacket->PushCell(packet->from.port);
-	g_pProcessPacket->PushString((char*)packet->data);
-	g_pProcessPacket->PushCell(packet->size);
-	g_pProcessPacket->PushCell(packet->from.type);
+	g_pProcessPacketIn->PushString(packet->from.ToString());
+	g_pProcessPacketIn->PushCell(packet->from.port);
+	g_pProcessPacketIn->PushString((char*)packet->data);
+	g_pProcessPacketIn->PushCell(packet->size);
+	g_pProcessPacketIn->PushCell(packet->from.type);
 
-	g_pProcessPacket->Execute(&result);
+	g_pProcessPacketIn->Execute(&result);
 
 	if(result==Pl_Handled)
 	{
 		return 1;
 	}
-	return DETOUR_MEMBER_CALL(Detour_ProcessPacket)(packet);
+	return DETOUR_MEMBER_CALL(Detour_ProcessPacketIn)(packet);
+}
+
+DETOUR_DECL_STATIC5(Detour_ProcessPacketOut, int, void*, netchannel, int, socks, const netadr_t&, to, unsigned char*, data, void*, length)
+{
+	if(!g_pProcessPacketOut)
+	{
+		return DETOUR_STATIC_CALL(Detour_ProcessPacketOut)(netchannel, socks, to, data); // This is not supposed to happen normally. Generally speaking, don't mess with destiny.
+	}
+	cell_t result=0;
+
+	g_pProcessPacketOut->Execute(&result);
+
+	if(result==Pl_Handled)
+	{
+		return 1;
+	}
+	return DETOUR_STATIC_CALL(Detour_ProcessPacketOut)(netchannel, socks, to, data);
 }
 
 bool UDPCap::SDK_OnLoad(char *error, size_t maxlength, bool late)
@@ -80,22 +99,35 @@ bool UDPCap::SDK_OnLoad(char *error, size_t maxlength, bool late)
 	SM_GET_IFACE(MEMORYUTILS, memutils);
 	CDetourManager::Init(g_pSM->GetScriptingEngine(), g_pGameConf);
 
-	g_pDetour=DETOUR_CREATE_MEMBER(Detour_ProcessPacket, "CBaseServer::ProcessConnectionlessPacket");
+	g_pDetourProcessPacket=DETOUR_CREATE_MEMBER(Detour_ProcessPacketIn, "CBaseServer::ProcessConnectionlessPacket");
 
-	if(g_pDetour==nullptr)
+	if(g_pDetourProcessPacket==nullptr)
 	{
 		snprintf(error, maxlength, "Error loading detour ProcessPacket!");
 		return false;
 	}
-	g_pDetour->EnableDetour();
-	g_pProcessPacket = forwards->CreateForward("UDPC_ProcessIncomingPacket", ET_Event, 5, NULL, Param_String, Param_Cell, Param_String, Param_Cell, Param_Cell);
+
+	g_pDetourSendPacket=DETOUR_CREATE_STATIC(Detour_ProcessPacketOut, "NET_SendPacket");
+
+	if(g_pDetourSendPacket==nullptr)
+	{
+		snprintf(error, maxlength, "Error loading detour NET_SendPacket!");
+		return false;
+	}
+
+	g_pDetourProcessPacket->EnableDetour();
+	g_pDetourSendPacket->EnableDetour();
+
+	g_pProcessPacketIn = forwards->CreateForward("UDPC_ProcessInboundPacket", ET_Event, 5, NULL, Param_String, Param_Cell, Param_String, Param_Cell, Param_Cell);
+	g_pProcessPacketOut = forwards->CreateForward("UDPC_ProcessOutboundPacket", ET_Event, 5, NULL, Param_String, Param_Cell, Param_String, Param_Cell, Param_Cell);
 
 	return true;
 }
 
 void UDPCap::SDK_OnUnload()
 {
-	g_pDetour->Destroy();
+	g_pDetourProcessPacket->Destroy();
 	gameconfs->CloseGameConfigFile(g_pGameConf);
-	forwards->ReleaseForward(g_pProcessPacket);
+	forwards->ReleaseForward(g_pProcessPacketIn);
+	forwards->ReleaseForward(g_pProcessPacketOut);
 }

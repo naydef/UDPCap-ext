@@ -11,7 +11,9 @@ enum netadrtype_t
 	NA_IP,
 };
 
-forward Action UDPC_ProcessIncomingPacket(const char[] ip, int port, const char[] data, int length, netadrtype_t netaddrtype);
+forward Action UDPC_ProcessInboundPacket(const char[] ip, int port, char[] data, int& length, netadrtype_t netaddrtype);
+
+forward Action UDPC_ProcessOutboundPacket(const char[] ip, int port, char[] data, int& length, netadrtype_t netaddrtype);
 
 
 

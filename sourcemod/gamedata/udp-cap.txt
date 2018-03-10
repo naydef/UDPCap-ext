@@ -11,6 +11,13 @@
 				"windows"	"\x55\x8B\xEC\x81\xEC\x50\x0A"
 				"linux"		"_ZN11CBaseServer27ProcessConnectionlessPacketEP11netpacket_s"
 			}
+			
+			"NET_SendPacket"
+			{
+				"library"	"engine"
+				"windows"	"\x55\x8B\xEC\xB8\x84"
+				"linux"		"_Z14NET_SendPacketP11INetChanneliRK8netadr_sPKhiP8bf_writeb"
+			}
 		}
 	}
 	/* Here other game signatures will be added */
@@ -23,6 +30,13 @@
 				"library"	"engine"
 				"windows"	"\x55\x8B\xEC\x81\xEC\x50\x0A"
 				"linux"		"_ZN11CBaseServer27ProcessConnectionlessPacketEP11netpacket_s"
+			}
+			
+			"NET_SendPacket"
+			{
+				"library"	"engine"
+				"windows"	"\x55\x8B\xEC\xB8\x84"
+				"linux"		"_Z14NET_SendPacketP11INetChanneliRK8netadr_sPKhiP8bf_writeb"
 			}
 		}
 	}
